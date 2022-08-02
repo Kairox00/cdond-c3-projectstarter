@@ -16,7 +16,7 @@ commands:
             aws cloudformation delete-stack --stack-name udapeople-frontend-<<parameters.workflow_id>>
             echo "back,front,s3 deleted"
 
-  install-tar:
+  install-dep:
     steps:
       - run:
           name: Install tar utility
@@ -139,7 +139,7 @@ jobs:
       - image: amazon/aws-cli
     steps:
       - checkout
-      - install-tar
+      - install-dep
       - run:
           name: Ensure back-end infrastructure exists
           command: |
