@@ -234,9 +234,7 @@ jobs:
           name: Run migrations
           command: |
             cd backend
-            npm cache clear --force
             npm install
-            npm audit fix
             npm run migrations > migrations_dump.txt
           no_output_timeout: 30m
       - run:
