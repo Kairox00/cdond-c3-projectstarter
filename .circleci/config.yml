@@ -444,7 +444,7 @@ jobs:
             export OldWorkflowID=$(curl --insecure https://kvdb.io/${KVDB_BUCKET}/old_workflow_id)
 
             echo Old Workflow ID full: $OldWorkflowID
-            export OldWorkflowID = ${OldWorkflowID:10:17}
+            export OldWorkflowID=${OldWorkflowID:10:17}
 
             echo Old Workflow ID: $OldWorkflowID
             echo circle workflow: "${CIRCLE_WORKFLOW_ID:0:7}"
